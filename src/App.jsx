@@ -42,6 +42,30 @@ const projects = [
   },
 ]
 
+const featuredWork = [
+  {
+    title: 'LLM ShieldBench',
+    text: 'AI safety evaluation dashboard for testing chatbot behavior.',
+  },
+  {
+    title: 'SmartSight / Canvox',
+    text: 'Context-aware assistive perception for BLV-focused navigation support.',
+  },
+  {
+    title: 'PoseLab',
+    text: '2D/3D human pose estimation experiments using GNNs and Transformers.',
+  },
+]
+
+function CardActions() {
+  return (
+    <div className="card-actions">
+      <a href="#">View Project</a>
+      <a href="#">GitHub</a>
+    </div>
+  )
+}
+
 function App() {
   return (
     <main className="site-shell">
@@ -128,6 +152,23 @@ function App() {
         </div>
       </section>
 
+      <section className="section-band featured-section" aria-labelledby="featured-title">
+        <div className="section-heading compact">
+          <div className="section-kicker">Featured Work</div>
+          <h2 id="featured-title">Featured work from the lab.</h2>
+          <p>A quick look at the systems currently shaping Vedansh Labs.</p>
+        </div>
+        <div className="card-grid featured-grid">
+          {featuredWork.map((work) => (
+            <article className="proof-card" key={work.title}>
+              <h3>{work.title}</h3>
+              <p>{work.text}</p>
+              <CardActions />
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section-band" id="projects" aria-labelledby="projects-title">
         <div className="section-heading">
           <div className="section-kicker">Projects</div>
@@ -139,6 +180,7 @@ function App() {
               <div className="project-chip">{project.tag}</div>
               <h3>{project.title}</h3>
               <p>{project.text}</p>
+              <CardActions />
             </article>
           ))}
         </div>

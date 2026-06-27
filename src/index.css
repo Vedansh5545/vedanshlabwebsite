@@ -32,7 +32,6 @@ html {
 
 body {
   min-width: 320px;
-  min-height: 100vh;
   margin: 0;
   background:
     radial-gradient(circle at top left, rgba(54, 242, 178, 0.08), transparent 28rem),
