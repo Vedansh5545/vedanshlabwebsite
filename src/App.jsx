@@ -22,33 +22,24 @@ const pillars = [
 const projects = [
   {
     title: 'SmartSight / Canvox',
+    tag: 'Assistive AI',
     text: 'BLV-focused AI tools for context-aware obstacle detection, spatial reasoning, and assistive perception.',
   },
   {
     title: 'PoseLab',
+    tag: 'Human Motion',
     text: '2D/3D human pose estimation tools using GNNs and Transformers for reliable human motion understanding.',
   },
   {
     title: 'LLM ShieldBench',
+    tag: 'AI Safety',
     text: 'Chatbot cybersecurity and AI safety evaluation dashboards.',
   },
   {
     title: 'Paper2Code Kits',
+    tag: 'Research Tools',
     text: 'PyTorch templates, dataset processing tools, and reproducible experiment dashboards.',
   },
-]
-
-const roadmap = [
-  'Finalize Vedansh Labs identity',
-  'Update GitHub profile README',
-  'Update LinkedIn headline/about',
-  'Update portfolio hero section',
-  'Create SmartSight Lite repo',
-  'Add professional README',
-  'Build MVP demo',
-  'Post weekly progress on LinkedIn',
-  'Add demo video',
-  'Repeat with PoseLab and LLM ShieldBench',
 ]
 
 function App() {
@@ -66,7 +57,6 @@ function App() {
           </a>
           <div className="nav-links">
             <a href="#projects">Projects</a>
-            <a href="#roadmap">Roadmap</a>
             <a href="#">GitHub</a>
           </div>
         </nav>
@@ -80,6 +70,10 @@ function App() {
           <p className="hero-copy">
             Open-source, research-grade AI systems for accessibility, human
             understanding, and trustworthy intelligence.
+          </p>
+          <p className="founder-line">
+            Created by Vedansh Tembhre, a PhD student and AI researcher-builder
+            focused on human-centered spatial intelligence.
           </p>
           <div className="hero-actions" aria-label="Hero actions">
             <a className="button button-primary" href="#projects">
@@ -142,27 +136,12 @@ function App() {
         <div className="card-grid project-grid">
           {projects.map((project) => (
             <article className="project-card" key={project.title}>
-              <div className="project-chip">Research Build</div>
+              <div className="project-chip">{project.tag}</div>
               <h3>{project.title}</h3>
               <p>{project.text}</p>
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="section-band roadmap-section" id="roadmap" aria-labelledby="roadmap-title">
-        <div className="section-heading">
-          <div className="section-kicker">Roadmap</div>
-          <h2 id="roadmap-title">A practical path for building in public.</h2>
-        </div>
-        <ol className="roadmap-list">
-          {roadmap.map((item, index) => (
-            <li className="roadmap-item" key={item}>
-              <span>{String(index + 6).padStart(2, '0')}</span>
-              <p>{item}</p>
-            </li>
-          ))}
-        </ol>
       </section>
 
       <footer className="site-footer">
