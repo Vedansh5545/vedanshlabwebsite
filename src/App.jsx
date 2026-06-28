@@ -1,5 +1,18 @@
 import './App.css'
 
+const links = {
+  githubProfile: null,
+  linkedInProfile: null,
+  youtubeChannel: null,
+  email: null,
+  projects: {
+    'LLM ShieldBench': null,
+    'SmartSight / Canvox': null,
+    PoseLab: null,
+    'Paper2Code Kits': null,
+  },
+}
+
 const pillars = [
   {
     title: 'Accessible AI',
@@ -57,31 +70,76 @@ const featuredWork = [
   },
 ]
 
-function CardActions() {
+function ExternalLink({ href, children, className, disabledLabel, comingSoonLabel }) {
+  if (!href) {
+    const label = disabledLabel || children
+    const accessibilityLabel = comingSoonLabel || `${label} link coming soon`
+
+    return (
+      <span
+        className={className}
+        role="link"
+        aria-disabled="true"
+        aria-label={accessibilityLabel}
+        title={accessibilityLabel}
+      >
+        {label}
+      </span>
+    )
+  }
+
+  return (
+    <a className={className} href={href} target="_blank" rel="noreferrer">
+      {children}
+    </a>
+  )
+}
+
+function CardActions({ projectTitle }) {
+  const projectLink = links.projects[projectTitle]
+
   return (
     <div className="card-actions">
-      <a href="#">View Project</a>
-      <a href="#">GitHub</a>
+      <ExternalLink
+        href={projectLink}
+        disabledLabel="Coming soon"
+        comingSoonLabel="Project link coming soon"
+      >
+        {projectLink ? 'View Project' : 'Coming soon'}
+      </ExternalLink>
+      <ExternalLink
+        href={projectLink}
+        disabledLabel="GitHub soon"
+        comingSoonLabel="GitHub link coming soon"
+      >
+        GitHub
+      </ExternalLink>
     </div>
   )
 }
 
 function App() {
   return (
-    <main className="site-shell">
+    <main className="site-shell" id="top">
       <section className="hero-section" aria-labelledby="hero-title">
         <div className="hero-grid" aria-hidden="true"></div>
         <div className="hero-glow hero-glow-primary" aria-hidden="true"></div>
         <div className="hero-glow hero-glow-secondary" aria-hidden="true"></div>
 
         <nav className="topbar" aria-label="Primary navigation">
-          <a className="brand-mark" href="#">
+          <a className="brand-mark" href="#top">
             <span className="brand-sigil">VL</span>
             <span>Vedansh Labs</span>
           </a>
           <div className="nav-links">
             <a href="#projects">Projects</a>
-            <a href="#">GitHub</a>
+            <ExternalLink
+              href={links.githubProfile}
+              disabledLabel="GitHub soon"
+              comingSoonLabel="GitHub link coming soon"
+            >
+              GitHub
+            </ExternalLink>
           </div>
         </nav>
 
@@ -103,9 +161,14 @@ function App() {
             <a className="button button-primary" href="#projects">
               Explore Projects
             </a>
-            <a className="button button-secondary" href="#">
+            <ExternalLink
+              className="button button-secondary"
+              href={links.githubProfile}
+              disabledLabel="GitHub soon"
+              comingSoonLabel="GitHub link coming soon"
+            >
               View GitHub
-            </a>
+            </ExternalLink>
           </div>
         </div>
 
@@ -163,7 +226,7 @@ function App() {
             <article className="proof-card" key={work.title}>
               <h3>{work.title}</h3>
               <p>{work.text}</p>
-              <CardActions />
+              <CardActions projectTitle={work.title} />
             </article>
           ))}
         </div>
@@ -180,7 +243,7 @@ function App() {
               <div className="project-chip">{project.tag}</div>
               <h3>{project.title}</h3>
               <p>{project.text}</p>
-              <CardActions />
+              <CardActions projectTitle={project.title} />
             </article>
           ))}
         </div>
@@ -192,10 +255,34 @@ function App() {
           <p>Building human-centered AI from research to reality.</p>
         </div>
         <nav className="footer-links" aria-label="Footer links">
-          <a href="#">GitHub</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">YouTube</a>
-          <a href="#">Email</a>
+          <ExternalLink
+            href={links.githubProfile}
+            disabledLabel="GitHub soon"
+            comingSoonLabel="GitHub link coming soon"
+          >
+            GitHub
+          </ExternalLink>
+          <ExternalLink
+            href={links.linkedInProfile}
+            disabledLabel="LinkedIn soon"
+            comingSoonLabel="LinkedIn link coming soon"
+          >
+            LinkedIn
+          </ExternalLink>
+          <ExternalLink
+            href={links.youtubeChannel}
+            disabledLabel="YouTube soon"
+            comingSoonLabel="YouTube link coming soon"
+          >
+            YouTube
+          </ExternalLink>
+          <ExternalLink
+            href={links.email ? `mailto:${links.email}` : null}
+            disabledLabel="Email soon"
+            comingSoonLabel="Email link coming soon"
+          >
+            Email
+          </ExternalLink>
         </nav>
       </footer>
     </main>
