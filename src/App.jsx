@@ -1,10 +1,10 @@
 import './App.css'
 
 const links = {
-  githubProfile: null,
-  linkedInProfile: null,
-  youtubeChannel: null,
-  email: null,
+  githubProfile: 'https://github.com/Vedansh5545',
+  linkedInProfile: 'https://www.linkedin.com/in/vedansh-tembhre/',
+  youtubeChannel: 'https://www.youtube.com/@VedanshLabs',
+  email: 'vedansh10tembhre@gmail.com',
   projects: {
     'LLM ShieldBench': null,
     'SmartSight / Canvox': null,
@@ -13,60 +13,114 @@ const links = {
   },
 }
 
-const pillars = [
+const proofItems = [
   {
-    title: 'Accessible AI',
-    text: 'AI tools that help people navigate, learn, and interact.',
+    title: 'Open-source systems',
+    summary: 'Practical AI systems built to be inspected, reused, and improved.',
+    details:
+      'Vedansh Labs focuses on open codebases and project repositories that turn research ideas into usable systems for students, researchers, engineers, and real users.',
+    tags: ['GitHub repos', 'Modular code', 'Research-to-system'],
   },
   {
-    title: 'Human Understanding',
-    text: 'AI that understands human pose, motion, behavior, and context.',
+    title: 'Research-grade demos',
+    summary: 'Working demos that make model behavior visible and easier to understand.',
+    details:
+      'Demos should show how a system behaves in practice - from assistive perception to pose estimation and safety evaluation - instead of only describing the idea.',
+    tags: ['Interactive demos', 'Model behavior', 'Practical validation'],
   },
   {
-    title: 'Trustworthy Intelligence',
-    text: 'AI systems that are safer, more reliable, and easier to evaluate.',
+    title: 'Evaluation dashboards',
+    summary: 'Interfaces for testing safety, reliability, and system behavior.',
+    details:
+      'Dashboards help inspect outputs, compare results, analyze risks, and make AI systems easier to evaluate before they are trusted in real workflows.',
+    tags: ['LLM ShieldBench', 'Risk analysis', 'Benchmark views'],
   },
   {
-    title: 'Open Research Tools',
-    text: 'Reusable tools for researchers, engineers, and students.',
+    title: 'Reproducible tools',
+    summary: 'Templates, processors, and experiment utilities that others can build on.',
+    details:
+      'Reusable research infrastructure makes experiments easier to reproduce, extend, and teach - especially for students and builders implementing AI papers.',
+    tags: ['PyTorch templates', 'Dataset tools', 'Experiment dashboards'],
+  },
+]
+
+const systems = [
+  {
+    title: 'Accessible AI & Assistive Systems',
+    text: 'Assistive AI systems that help people navigate, understand, and interact with the world more safely.',
+    output: 'BLV perception tools and context-aware navigation systems.',
+    tags: ['SmartSight', 'Canvox', 'BLV tools', 'Context-aware obstacle detection'],
+  },
+  {
+    title: 'Human Motion & Spatial Understanding',
+    text: 'AI systems for understanding human pose, body motion, 3D structure, behavior, and spatial context.',
+    output: '3D pose models, motion reasoning tools, and spatial understanding experiments.',
+    tags: ['PoseLab', '2D-to-3D pose', 'GNN + Transformer models', 'Multi-hypothesis motion'],
+  },
+  {
+    title: 'Trustworthy AI Evaluation',
+    text: 'Benchmarks and dashboards that make model behavior easier to test, inspect, and compare.',
+    output: 'LLM safety dashboards, prompt-response risk analysis, and evaluation views.',
+    tags: ['LLM ShieldBench', 'Safety dashboards', 'Chatbot security', 'Prompt-response risk'],
+  },
+  {
+    title: 'Open Research Infrastructure',
+    text: 'Reusable code, templates, datasets, dashboards, and experiment utilities for practical AI research.',
+    output: 'reproducible experiment kits, dataset processors, and research demo repositories.',
+    tags: ['Paper2Code Kits', 'PyTorch templates', 'Dataset processing', 'Experiment dashboards'],
   },
 ]
 
 const projects = [
   {
-    title: 'SmartSight / Canvox',
-    tag: 'Assistive AI',
-    text: 'BLV-focused AI tools for context-aware obstacle detection, spatial reasoning, and assistive perception.',
-  },
-  {
-    title: 'PoseLab',
-    tag: 'Human Motion',
-    text: '2D/3D human pose estimation tools using GNNs and Transformers for reliable human motion understanding.',
-  },
-  {
     title: 'LLM ShieldBench',
-    tag: 'AI Safety',
-    text: 'Chatbot cybersecurity and AI safety evaluation dashboards.',
+    category: 'Trustworthy AI',
+    text: 'Safety evaluation dashboards and chatbot security testing tools for prompt-response risk analysis.',
+    actions: [
+      ['View GitHub', 'https://github.com/Vedansh5545/llm-shieldbench', 'primary'],
+      ['Watch Demo', 'https://youtu.be/UtXaATJJ2dI', 'secondary'],
+    ],
+    metadata: [
+      ['Artifact', 'Safety benchmark dashboard'],
+      ['Focus', 'LLM safety evaluation'],
+      ['Status', 'Public repo + demo available'],
+    ],
   },
   {
-    title: 'Paper2Code Kits',
-    tag: 'Research Tools',
-    text: 'PyTorch templates, dataset processing tools, and reproducible experiment dashboards.',
+    title: 'Canvox',
+    category: 'Assistive Systems',
+    text: 'BLV-focused assistive perception for context-aware obstacle detection and spatial understanding.',
+    actions: [
+      ['View GitHub', 'https://github.com/hpcclab/Canvox', 'secondary'],
+    ],
+    metadata: [
+      ['Artifact', 'Canvox assistive perception repository'],
+      ['Focus', 'Spatial awareness'],
+      ['Status', 'Repository available'],
+    ],
   },
 ]
 
-const featuredWork = [
+const infrastructure = [
   {
-    title: 'LLM ShieldBench',
-    text: 'AI safety evaluation dashboard for testing chatbot behavior.',
+    number: '01',
+    title: 'Codebases',
+    text: 'Reusable project repositories with clear structure and practical implementation paths.',
   },
   {
-    title: 'SmartSight / Canvox',
-    text: 'Context-aware assistive perception for BLV-focused navigation support.',
+    number: '02',
+    title: 'Evaluation dashboards',
+    text: 'Interfaces for inspecting model outputs, risks, benchmark behavior, and experiment results.',
   },
   {
-    title: 'PoseLab',
-    text: '2D/3D human pose estimation experiments using GNNs and Transformers.',
+    number: '03',
+    title: 'Experiment utilities',
+    text: 'Dataset processors, training helpers, evaluation scripts, and reproducible workflows.',
+  },
+  {
+    number: '04',
+    title: 'Notes and implementation kits',
+    text: 'Research notes and practical guides that help students, engineers, and researchers extend the work.',
   },
 ]
 
@@ -88,6 +142,14 @@ function ExternalLink({ href, children, className, disabledLabel, comingSoonLabe
     )
   }
 
+  if (href.startsWith('mailto:')) {
+    return (
+      <a className={className} href={href}>
+        {children}
+      </a>
+    )
+  }
+
   return (
     <a className={className} href={href} target="_blank" rel="noreferrer">
       {children}
@@ -95,25 +157,79 @@ function ExternalLink({ href, children, className, disabledLabel, comingSoonLabe
   )
 }
 
-function CardActions({ projectTitle }) {
-  const projectLink = links.projects[projectTitle]
-
+function TagList({ tags }) {
   return (
-    <div className="card-actions">
-      <ExternalLink
-        href={projectLink}
-        disabledLabel="Coming soon"
-        comingSoonLabel="Project link coming soon"
-      >
-        {projectLink ? 'View Project' : 'Coming soon'}
-      </ExternalLink>
-      <ExternalLink
-        href={projectLink}
-        disabledLabel="GitHub soon"
-        comingSoonLabel="GitHub link coming soon"
-      >
-        GitHub
-      </ExternalLink>
+    <div className="tag-list" aria-label="Project metadata">
+      {tags.map((tag) => (
+        <span className="tag" key={tag}>
+          {tag}
+        </span>
+      ))}
+    </div>
+  )
+}
+
+function SystemsVisual() {
+  return (
+    <div className="systems-visual" aria-label="CSS systems lab visual">
+      <article className="visual-panel motion-panel">
+        <div className="panel-header">
+          <span className="panel-dot human-dot"></span>
+          <span>Human Motion</span>
+        </div>
+        <div className="motion-stage" aria-hidden="true">
+          <span className="joint head"></span>
+          <span className="joint shoulder-left"></span>
+          <span className="joint shoulder-right"></span>
+          <span className="joint hip-left"></span>
+          <span className="joint hip-right"></span>
+          <span className="joint knee-left"></span>
+          <span className="joint knee-right"></span>
+          <span className="bone spine"></span>
+          <span className="bone shoulder-bar"></span>
+          <span className="bone hip-bar"></span>
+          <span className="bone leg-left"></span>
+          <span className="bone leg-right"></span>
+          <span className="trajectory trajectory-one"></span>
+          <span className="trajectory trajectory-two"></span>
+        </div>
+      </article>
+
+      <article className="visual-panel spatial-panel">
+        <div className="panel-header">
+          <span className="panel-dot spatial-dot"></span>
+          <span>Spatial AI</span>
+        </div>
+        <div className="spatial-map" aria-hidden="true">
+          <span className="path-line"></span>
+          <span className="map-marker start"></span>
+          <span className="map-marker target"></span>
+          <span className="obstacle obstacle-one"></span>
+          <span className="obstacle obstacle-two"></span>
+          <span className="obstacle obstacle-three"></span>
+        </div>
+      </article>
+
+      <article className="visual-panel trust-panel">
+        <div className="panel-header">
+          <span className="panel-dot trust-dot"></span>
+          <span>Trust Evaluation</span>
+        </div>
+        <div className="eval-rows" aria-hidden="true">
+          <div className="eval-row">
+            <span>Prompt risk</span>
+            <strong style={{ '--bar-width': '64%' }}></strong>
+          </div>
+          <div className="eval-row">
+            <span>Safety check</span>
+            <strong style={{ '--bar-width': '82%' }}></strong>
+          </div>
+          <div className="eval-row">
+            <span>Traceability</span>
+            <strong style={{ '--bar-width': '72%' }}></strong>
+          </div>
+        </div>
+      </article>
     </div>
   )
 }
@@ -121,131 +237,242 @@ function CardActions({ projectTitle }) {
 function App() {
   return (
     <main className="site-shell" id="top">
-      <section className="hero-section" aria-labelledby="hero-title">
-        <div className="hero-grid" aria-hidden="true"></div>
-        <div className="hero-glow hero-glow-primary" aria-hidden="true"></div>
-        <div className="hero-glow hero-glow-secondary" aria-hidden="true"></div>
-
-        <nav className="topbar" aria-label="Primary navigation">
-          <a className="brand-mark" href="#top">
-            <span className="brand-sigil">VL</span>
-            <span>Vedansh Labs</span>
-          </a>
-          <div className="nav-links">
-            <a href="#projects">Projects</a>
-            <ExternalLink
-              href={links.githubProfile}
-              disabledLabel="GitHub soon"
-              comingSoonLabel="GitHub link coming soon"
-            >
-              GitHub
-            </ExternalLink>
-          </div>
+      <header className="site-header" aria-label="Site header">
+        <a className="brand-mark" href="#top" aria-label="Vedansh Labs home">
+          <span className="brand-sigil">VL</span>
+          <span>Vedansh Labs</span>
+        </a>
+        <nav className="nav-links" aria-label="Primary navigation">
+          <a href="#systems">Systems</a>
+          <a href="#work">Work</a>
+          <ExternalLink href={links.githubProfile}>
+            GitHub
+          </ExternalLink>
         </nav>
+      </header>
 
+      <section className="hero-section" aria-labelledby="hero-title">
+        <div className="precision-grid" aria-hidden="true"></div>
         <div className="hero-content">
-          <p className="eyebrow">Vedansh Tembhre - AI Researcher-Builder</p>
+          <p className="eyebrow">HUMAN-CENTERED SYSTEMS LAB</p>
           <h1 id="hero-title">Vedansh Labs</h1>
           <p className="hero-tagline">
             Building human-centered AI from research to reality.
           </p>
           <p className="hero-copy">
-            Open-source, research-grade AI systems for accessibility, human
-            understanding, and trustworthy intelligence.
+            I build open-source, research-grade AI systems that understand
+            humans, motion, space, and trust - focused on accessibility,
+            reliable perception, and trustworthy intelligence.
           </p>
           <p className="founder-line">
-            Created by Vedansh Tembhre, a PhD student and AI researcher-builder
-            focused on human-centered spatial intelligence.
+            Created by Vedansh Tembhre - AI Researcher-Builder.
           </p>
           <div className="hero-actions" aria-label="Hero actions">
-            <a className="button button-primary" href="#projects">
-              Explore Projects
+            <a className="button button-primary" href="#systems">
+              View Systems
             </a>
-            <ExternalLink
-              className="button button-secondary"
-              href={links.githubProfile}
-              disabledLabel="GitHub soon"
-              comingSoonLabel="GitHub link coming soon"
-            >
-              View GitHub
-            </ExternalLink>
+            <a className="button button-secondary" href="#work">
+              See Featured Work
+            </a>
           </div>
         </div>
-
-        <div className="lab-visual" aria-hidden="true">
-          <div className="orbit orbit-large"></div>
-          <div className="orbit orbit-small"></div>
-          <div className="signal-card signal-card-one">
-            <span>Assistive Perception</span>
-            <strong>Spatial AI</strong>
-          </div>
-          <div className="signal-card signal-card-two">
-            <span>Evaluation Layer</span>
-            <strong>Trust Metrics</strong>
-          </div>
-          <div className="core-node"></div>
-        </div>
+        <SystemsVisual />
       </section>
 
-      <section className="identity-section section-band" aria-labelledby="identity-title">
-        <div className="section-kicker">Public Identity</div>
-        <div className="section-heading">
-          <h2 id="identity-title">Research-grade AI, built for real people.</h2>
+      <section className="proof-strip" aria-labelledby="lab-outputs-title">
+        <div className="section-heading compact">
+          <p className="section-kicker">Lab Outputs</p>
+          <h2 id="lab-outputs-title">What Vedansh Labs turns research into.</h2>
           <p>
-            Vedansh Labs turns advanced AI ideas into practical open-source
-            systems, demos, benchmarks, and research tools that engineers,
-            students, researchers, and real users can actually use.
+            A compact view of the artifacts behind the lab - systems, demos,
+            dashboards, and reusable tools that make AI research easier to
+            inspect, test, and extend.
           </p>
         </div>
-      </section>
-
-      <section className="section-band" aria-labelledby="pillars-title">
-        <div className="section-heading compact">
-          <div className="section-kicker">Core Pillars</div>
-          <h2 id="pillars-title">The research directions behind the lab.</h2>
-        </div>
-        <div className="card-grid pillar-grid">
-          {pillars.map((pillar) => (
-            <article className="info-card" key={pillar.title}>
-              <span className="card-line"></span>
-              <h3>{pillar.title}</h3>
-              <p>{pillar.text}</p>
-            </article>
+        <div className="proof-grid">
+          {proofItems.map((item) => (
+            <details className="proof-card" key={item.title}>
+              <summary>
+                <span className="proof-marker" aria-hidden="true"></span>
+                <span>
+                  <strong>{item.title}</strong>
+                  <span>{item.summary}</span>
+                </span>
+              </summary>
+              <div className="proof-card-body">
+                <p>{item.details}</p>
+                <div className="lab-output-tags" aria-label={`${item.title} tags`}>
+                  {item.tags.map((tag) => (
+                    <span className="tag" key={tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </details>
           ))}
         </div>
       </section>
 
-      <section className="section-band featured-section" aria-labelledby="featured-title">
-        <div className="section-heading compact">
-          <div className="section-kicker">Featured Work</div>
-          <h2 id="featured-title">Featured work from the lab.</h2>
-          <p>A quick look at the systems currently shaping Vedansh Labs.</p>
-        </div>
-        <div className="card-grid featured-grid">
-          {featuredWork.map((work) => (
-            <article className="proof-card" key={work.title}>
-              <h3>{work.title}</h3>
-              <p>{work.text}</p>
-              <CardActions projectTitle={work.title} />
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-band" id="projects" aria-labelledby="projects-title">
+      <section className="section-band systems-section" id="systems" aria-labelledby="systems-title">
         <div className="section-heading">
-          <div className="section-kicker">Projects</div>
-          <h2 id="projects-title">Open systems moving from prototype to proof.</h2>
+          <p className="section-kicker">Lab Domains</p>
+          <h2 id="systems-title">Systems that understand humans, space, and trust.</h2>
+          <p>
+            Vedansh Labs connects human-centered AI research with working
+            systems, demos, benchmarks, and reusable tools.
+          </p>
         </div>
-        <div className="card-grid project-grid">
-          {projects.map((project) => (
-            <article className="project-card" key={project.title}>
-              <div className="project-chip">{project.tag}</div>
+        <div className="systems-grid">
+          {systems.map((system) => (
+            <article className="system-card" key={system.title}>
+              <span className="system-glyph" aria-hidden="true"></span>
+              <h3>{system.title}</h3>
+              <p>{system.text}</p>
+              <p className="system-output">
+                <strong>Output:</strong> {system.output}
+              </p>
+              <TagList tags={system.tags} />
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-band work-section" id="work" aria-labelledby="work-title">
+        <div className="section-heading">
+          <p className="section-kicker">Featured Work</p>
+          <h2 id="work-title">Featured work from the lab.</h2>
+          <p>
+            Concrete systems, benchmarks, and research tools moving from
+            prototype to proof.
+          </p>
+        </div>
+        <div className="project-grid">
+          <article className="project-card project-card-primary">
+            <p className="project-category">{projects[0].category}</p>
+            <h3>{projects[0].title}</h3>
+            <p>{projects[0].text}</p>
+            <dl className="project-metadata" aria-label={`${projects[0].title} metadata`}>
+              {projects[0].metadata.map(([label, value]) => (
+                <div key={label}>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
+            </dl>
+            <div className="project-actions" aria-label={`${projects[0].title} links`}>
+              {projects[0].actions.map(([label, href, variant]) => (
+                <a
+                  className={`project-link project-link-${variant}`}
+                  href={href}
+                  key={label}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          </article>
+
+          <div className="supporting-projects" aria-label="Supporting featured work">
+            {projects.slice(1).map((project) => (
+              <article className="project-card project-card-compact" key={project.title}>
+              <p className="project-category">{project.category}</p>
               <h3>{project.title}</h3>
               <p>{project.text}</p>
-              <CardActions projectTitle={project.title} />
+              <dl className="project-metadata compact" aria-label={`${project.title} metadata`}>
+                {project.metadata.map(([label, value]) => (
+                  <div key={label}>
+                    <dt>{label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="project-actions compact" aria-label={`${project.title} links`}>
+                {project.actions.map(([label, href, variant]) => (
+                  <a
+                    className={`project-link project-link-${variant}`}
+                    href={href}
+                    key={label}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {label}
+                  </a>
+                ))}
+              </div>
             </article>
-          ))}
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-band infrastructure-section" aria-labelledby="infrastructure-title">
+        <div className="infrastructure-layout">
+          <div className="section-heading infrastructure-copy">
+            <p className="section-kicker">Open Research Infrastructure</p>
+            <h2 id="infrastructure-title">Built to be inspected, reused, and extended.</h2>
+            <p>
+              Vedansh Labs focuses on practical research artifacts &mdash; codebases,
+              dashboards, dataset utilities, experiment scripts, and implementation
+              notes that make advanced AI ideas easier to test, reproduce, and build on.
+            </p>
+          </div>
+          <div className="artifact-stack" aria-label="Research artifact stack">
+            <h3>Research artifact stack</h3>
+            <div className="artifact-rows">
+              {infrastructure.map((item) => (
+                <article className="artifact-row" key={item.title}>
+                  <span className="artifact-number">{item.number}</span>
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p>{item.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="founder-section" aria-labelledby="founder-title">
+        <div className="founder-card">
+          <div>
+            <p className="section-kicker">FOUNDER</p>
+            <h2 id="founder-title">Built by Vedansh Tembhre.</h2>
+            <p>
+              Vedansh Tembhre is a PhD CS student and AI researcher-builder
+              creating open-source, research-grade systems for human-centered
+              intelligence &mdash; with a focus on accessibility, computer
+              vision, 3D human motion understanding, and trustworthy AI
+              evaluation.
+            </p>
+          </div>
+          <div className="founder-identity" aria-label="Founder identity">
+            <div className="founder-identity-header">
+              <strong>Vedansh Tembhre</strong>
+              <span>AI Researcher-Builder</span>
+              <span>Creator of Vedansh Labs</span>
+            </div>
+            <div className="founder-detail-group">
+              <h3>Focus:</h3>
+              <ul>
+                <li>Human-centered AI</li>
+                <li>Computer vision</li>
+                <li>3D motion understanding</li>
+                <li>Trustworthy evaluation</li>
+              </ul>
+            </div>
+            <div className="founder-detail-group">
+              <h3>Currently building:</h3>
+              <ul>
+                <li>LLM ShieldBench</li>
+                <li>Canvox</li>
+                <li>Open research infrastructure</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -255,32 +482,16 @@ function App() {
           <p>Building human-centered AI from research to reality.</p>
         </div>
         <nav className="footer-links" aria-label="Footer links">
-          <ExternalLink
-            href={links.githubProfile}
-            disabledLabel="GitHub soon"
-            comingSoonLabel="GitHub link coming soon"
-          >
+          <ExternalLink href={links.githubProfile}>
             GitHub
           </ExternalLink>
-          <ExternalLink
-            href={links.linkedInProfile}
-            disabledLabel="LinkedIn soon"
-            comingSoonLabel="LinkedIn link coming soon"
-          >
+          <ExternalLink href={links.linkedInProfile}>
             LinkedIn
           </ExternalLink>
-          <ExternalLink
-            href={links.youtubeChannel}
-            disabledLabel="YouTube soon"
-            comingSoonLabel="YouTube link coming soon"
-          >
+          <ExternalLink href={links.youtubeChannel}>
             YouTube
           </ExternalLink>
-          <ExternalLink
-            href={links.email ? `mailto:${links.email}` : null}
-            disabledLabel="Email soon"
-            comingSoonLabel="Email link coming soon"
-          >
+          <ExternalLink href={`mailto:${links.email}`}>
             Email
           </ExternalLink>
         </nav>
